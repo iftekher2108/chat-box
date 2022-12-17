@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --head-color: #F0802B;
+    --header-icon: #d3752e;
+    --bg-color: #083958;
+    --chat-bg-color: #3A557A;
+    --text-color: #0078A8;
+    --cap-color: #90B7CE;
+    --text1-color: #009FB2;
+    --transition: all 0.3s ease-in-out;
+    --drop-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    ;
+
+}
+
+
+/* ===============================body css start code================ */
+body {
+    background: var(--bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.chat_body {
+    background: var(--chat-bg-color);
+    height: 400px;
+    width: 350px;
+    margin: 10px;
+    border-radius: 20px;
+    position: fixed;
+    transform-origin: bottom right;
+    transform: scale(0);
+    inset: auto -3rem 4.5rem auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: var(--transition);
+
+}
+
+/* ==============================body css end code =================================== */
+
+/* ==========================toggle start button========================== */
+/* .message-open-btn::before {
+    content: "9+";
+    height: 15px;
+    padding: 3px;
+    text-align: center;
+    font-size: 10px;  
+    font-weight: 800;
+      position: absolute;
+      border-radius: 50%;
+      background: var(--text1-color);
+    transform: translate(-150%,-100%);
+} */
+.message-open-btn {
+    position: fixed;
+    inset: auto 1rem 1rem auto;
+    background: var(--head-color);
+    padding: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.message-open-btn:hover {
+    color: var(--head-color);
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+/* ===============================toggle end button========================================== */
+
+
+/* ============================================chat start header================================= */
+.chat_header {
+    background: var(--head-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    height: 60px;
+    border-radius: 20px 20px 5px 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 5px;
+
+}
+
+.status {
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.chat_client {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+
+}
+
+.chat_client img {
+    border-radius: 50%;
+}
+
+.toggle {
+    padding: 10px 15px;
+    background: var(--header-icon);
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    height: 80px;
+    transform-origin: top right;
+    transform: scaleY(0) translateX(-50px);
+    padding: 5px;
+    border-radius: 5px;
+    background: var(--bg-color);
+    color: white;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.on {
+    display: block !important;
+}
+
+.off {
+    display: none !important;
+}
+
+.profile,
+.about,
+.report {
+    display: flex;
+    gap: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.profile:hover,
+.about:hover,
+.report:hover,
+.profile:focus,
+.about:focus,
+.report:focus {
+    background: var(--header-icon);
+}
+
+/* ==========================================chat header end here======================================= */
+
+/* =====================================messages start content=============================================== */
+.messages {
+    height: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    gap: 10px;
+    overflow-y: scroll;
+}
+.messages::-webkit-scrollbar {
+    display: none;
+
+}
+
+
+.client p {
+    word-wrap: wrap;
+    width: fit-content;
+    padding: 5px;
+    background: var(--text1-color);
+    border-radius: 5px;
+}
+.sender {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    /* transform: translateX(22%); */
+    position: relative;
+}
+
+
+.sen {
+
+    align-self: flex-end;
+    width: fit-content;
+    border-radius: 5px;
+    word-wrap: wrap;
+    background: var(--text-color);
+    padding: 5px;
+    margin: 10px;
+
+}
+.time {
+    opacity: 0.6;
+    font-size: smaller;
+    background: transparent;
+}
+.r {
+    align-self: flex-end;
+    transform: translateX(-20%);
+}
+.l {
+    align-self: flex-start;
+    transform: translateX(20%);
+}
+
+/* ========================================messages end content======================================== */
+
+/* =========================================message start send============================================== */
+.message-send {
+    height: 40px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    background: var(--chat-bg-color);
+    box-shadow: rgba(0, 0, 0, 0.10) 0px -4px 10px;
+    border-radius: 5px 5px 10px 10px;
+}
+
+::placeholder {
+    color: #083958;
+}
+
+input[type="text"] {
+    height: 25px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+    width: 240px;
+    word-wrap: wrap;
+    outline-color: var(--text-color);
+}
+
+button {
+    height: 35px;
+    width: 76px;
+    color: white;
+    border: 2px solid var(--head-color);
+    background: var(--head-color);
+    border-radius: 0px 10px 10px 0px;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: white;
+    color: var(--head-color);
+}
+
+/* ===========================================message end send =============================================== */
+
+
+
+
+
+
+@media screen and (max-width:370px) {
+    .chat_body {
+        width: 265px;
+        inset: auto -3rem 4.5rem auto;
+    }
+
+    input[type="text"] {
+        width: 155px;
+    }
+
+    .messages .client p {
+        width: 200px;
+    }
+
+    .messages .sender p {
+        width: 200px;
+    }
+
+    .messages .sender {
+        transform: translateX(14%);
+        position: relative;
+    }
+
+    .messages .sender::after {
+        transform: translateX(560%);
+    }
+
+
+}
+@media screen and (max-width:200px) {
+    .chat_body {
+        width: 180px;
+        height: 300px;
+        inset: auto -3rem 4.5rem auto;
+        overflow: hidden;
+    }
+
+input[type="text"] {
+    height: 15px;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+    width: 90px;
+    word-wrap: wrap;
+    outline: none;
+}
+
+    .messages .client p {
+        width: 100px;
+    }
+
+    .messages .sender p {
+        width: 100px;
+    }
+
+    .messages .sender {
+        transform: translateX(32%);
+        position: relative;
+    }
+
+    button {
+        height: 25px;
+        width: 56px;
+        color: white;
+        border: 2px solid var(--head-color);
+        background: var(--head-color);
+        border-radius: 0px 10px 10px 0px;
+        transition: var(--transition);
+    }
+
+
+
+}

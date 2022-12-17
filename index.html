@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>right side bottom chat box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="chat_body">
+        <div class="chat_header">
+            <div class="chat_client">
+                <img src="image/client.jpg" alt="client-image" height="50" width="50">
+                <div class="client">
+                    <h3>Iftekher Mahmud</h3>
+                    <h6 class="status">Active Now</h6>
+                </div>
+
+
+            </div>
+            <div class="icon">
+                <div class="toggle">
+                    <i class="fa-solid fa-ellipsis-vertical open on"></i>
+                    <i class="fa-solid fa-xmark close off"></i>
+                </div>
+                <div class="menu">
+                    <div class="profile">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Profile</p>
+                    </div>
+                    <div class="about">
+                        <i class="fa-solid fa-address-card"></i>
+                        <p>About</p>
+                    </div>
+                    <div class="report">
+                        <i class="fa-solid fa-ban"></i>
+                        <p>Report</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="messages">
+            <div class="client">
+                <p class="cli">hello sir how can i help you ?</p>
+                <!-- <p class="time"></p> -->
+            </div>
+            <div class="sender">
+                <p class="sen">give me some water.</p>
+                <!-- <p class="time"></p> -->
+            </div>
+        </div>
+        <div class="message-send">
+            <input type="text" name="" id="inputtext" placeholder="Enter Your Message">
+            <button>SEND</button>
+        </div>
+    </div>
+    <div class="message-open-btn">
+        <i class="fa-solid fa-envelope fa-bounce"
+            style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1; --fa-bounce-rebound: 0;"></i>
+    </div>
+
+
+
+
+
+    <script src="main.js"></script>
+    <script src="bot.js" defer></script>
+</body>
+
+</html>
